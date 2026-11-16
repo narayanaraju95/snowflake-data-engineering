@@ -1,0 +1,33 @@
+
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Standardized and deduplicated customer records."
+
+    columns:
+      - name: CUSTOMER_ID
+        description: "Unique customer identifier."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: CUSTOMER_NAME
+        data_tests:
+          - not_null
+
+      - name: EMAIL
+        data_tests:
+          - not_null
+
+      - name: COUNTRY
+        data_tests:
+          - not_null
+
+      - name: STATUS
+        data_tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - ACTIVE
+                  - INACTIVE

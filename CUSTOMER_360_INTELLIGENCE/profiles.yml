@@ -1,0 +1,10 @@
+CUSTOMER_360_INTELLIGENCE:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: API_PROJECT_WH
+      database: API_DATA_ENGINEERING
+      schema: DBT_DEV
+      threads: 8

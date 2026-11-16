@@ -1,0 +1,31 @@
+
+name: CUSTOMER_360_INTELLIGENCE
+version: 1.0.0
+config-version: 2
+profile: CUSTOMER_360_INTELLIGENCE
+
+model-paths:
+  - models
+analysis-paths:
+  - analyses
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+
+models:
+  CUSTOMER_360_INTELLIGENCE:
+
+    staging:
+      +materialized: view
+
+    intermediate:
+      +materialized: view
+
+    marts:
+      +materialized: table
+

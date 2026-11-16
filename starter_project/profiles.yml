@@ -1,0 +1,10 @@
+starter_project:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: API_DATA_ENGINEERING
+      schema: DBT_DEV
+      threads: 8

@@ -1,0 +1,17 @@
+
+version: 2
+
+sources:
+  - name: bronze_api
+    database: API_DATA_ENGINEERING
+    schema: BRONZE
+
+    tables:
+      - name: raw_api_customers
+        identifier: RAW_API_CUSTOMERS
+        description: "Raw customer records ingested from the simulated customer API."
+        columns:
+          - name: BATCH_ID
+          - name: SOURCE_NAME
+          - name: RAW_PAYLOAD
+          - name: INGESTED_AT
